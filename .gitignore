@@ -129,6 +129,9 @@ dmypy.json
 .pyre/
 
 
+#models 
+*.onnx 
+
 #images 
 *.png
 *.jpg
@@ -137,3 +140,7 @@ dmypy.json
 #folder
 export/
 data/
+
+#misc
+deploy.yaml
+history.snapshot
