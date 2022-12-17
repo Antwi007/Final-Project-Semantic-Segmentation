@@ -1,0 +1,17 @@
+UNET:
+    dataset: 'gmchallenge'
+    lr: 0.001
+    num_epochs: 200
+    model_type: "unet"
+    init_type: glorot
+    quantization: "FIXED" # "INT", "BNN", "Normal", "FIXED"
+    activation_f_width: 8
+    activation_i_width: 8
+    weight_f_width: 8
+    weight_i_width: 8
+    gpu_core_num: 1
+    trained_model: "./export/nana/results/logs/em_001_4_normal/em_001_4_normal.pkl"
+    experiment_name: "em_001_4"
+    log_output_dir: "./export/nana/results/logs/"
+    operation_mode: "visualize" # normal, visualize, retrain, inference
+    # trained_model: ""
