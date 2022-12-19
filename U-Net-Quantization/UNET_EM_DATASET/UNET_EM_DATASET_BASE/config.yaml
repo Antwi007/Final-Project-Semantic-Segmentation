@@ -1,17 +1,18 @@
 UNET:
     dataset: 'gmchallenge'
     lr: 0.001
-    num_epochs: 200
+    num_epochs: 10
     model_type: "unet"
     init_type: glorot
-    quantization: "FIXED" # "INT", "BNN", "Normal", "FIXED"
-    activation_f_width: 8
-    activation_i_width: 8
-    weight_f_width: 8
-    weight_i_width: 8
+    activation: "ternarytanh"
+    quantization: "Normal" # "INT", "BNN", "Normal", "FIXED"
+    activation_f_width: 4
+    activation_i_width: 4
+    weight_f_width: 4
+    weight_i_width: 4
     gpu_core_num: 1
-    trained_model: "./export/nana/results/logs/em_001_4_normal/em_001_4_normal.pkl"
-    experiment_name: "em_001_4"
+    trained_model: "./export/nana/results/logs/em_001_1/em_001_1.pkl"
+    experiment_name: "em_001_10_fixed_inf"
     log_output_dir: "./export/nana/results/logs/"
-    operation_mode: "visualize" # normal, visualize, retrain, inference
+    operation_mode: "inference" # normal, visualize, retrain, inference
     # trained_model: ""
