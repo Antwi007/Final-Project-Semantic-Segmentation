@@ -1,11 +1,11 @@
-How to run the code:
+## How to run the code (setup):
 1. Downgrade tensorflow to 1.15.3 (make sure to specify .3 of 1.15.3, this is the only known version that works)
 2. git clone https://github.com/tensorflow/models.git
 3. put the infer_and_vis.ipynb under models/research
 4. replace the eval.py in models/research/deeplab with the eval.py in this folder
-5. in models/research run export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim everytime you start a new terminal session or add it into ~/.bashrc
+5. in models/research run `export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim` everytime you start a new terminal session or add it into ~/.bashrc
 
-To train a quantized model using pretrained weights, 
+## To train a quantized model using pretrained weights, 
 1. download the pretrained weight by 
 wget http://download.tensorflow.org/models/deeplabv3_mnv2_pascal_train_aug_2018_01_29.tar.gz
 tar -xf deeplabv3_mnv2_pascal_train_aug_2018_01_29.tar.gz
@@ -33,7 +33,7 @@ python deeplab/train.py \
 
 You can specify the number of training steps by modifying the training_number_of_steps flag.
 
-To visualize the inference result:
+## To visualize the inference result:
 1. if your checkpoint directory does not contain checkpoint (not .ckpt, the checkpoint log for the directory named "checkpoint") create one and 
 follow this link to document your checkpoint https://github.com/tensorflow/models/issues/4671#issuecomment-402008892. Note that the path specified must be absolute path.
 
