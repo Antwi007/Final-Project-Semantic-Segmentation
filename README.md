@@ -1,7 +1,10 @@
 ![]( https://visitor-badge.glitch.me/badge?page_id=antwi007.Final-Project-Semantic-Segmentation)
 
-![alt text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/tree/nana/FCN-Quantization/img1real.png)
+![alt text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/img1real.png)
 ![alt text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/tree/nana/FCN-Quantization/image1segmentation.png)
+
+
+![alt text](https://github.com/hossein1387/Fixed-Point-U-Net-Quantization-for-Medical-Image-Segmentation/blob/master/Figs/nih.png)
 
 # Quantizing Deep Learning Models For Semantic Image Segmentation
 Welcome to our project on quantizing deep learning models for semantic image segmentation!
