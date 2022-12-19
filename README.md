@@ -57,11 +57,12 @@ Experiments with `Intel(R) Xeon(R) CPU @ 2.00GHz` and `Intel(R) Xeon(R) CPU @ 2.
 ### Segmentation Samples on Quantized and Non-Quantized Models 
 
 <div style="display:flex;">
-  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/real_img.png" width="300" height="300">
-  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/quantized_img.png" width="300" height="300">
-  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/real_img_normal.png" width="300" height="300">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/real_img.png" width="250" height="250">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/quantized_img.png" width="250" height="250">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/real_img_normal.png" width="250" height="250">
 </div>
 
+The leftmost image is the original image, the middle is the segmenation provided by the quantized model, and the rightmost is the segmentation mask provided by the normal non-quantized model. There's no significant drop in quality of the segmentation provided by the quantized model as compared to the non-quantized model.
 
 ## Citation
 
