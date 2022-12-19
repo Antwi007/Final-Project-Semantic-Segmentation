@@ -6,11 +6,6 @@
 </div>
 
 
-
-<!-- 
-![alt text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/img1real.png)
-![alt text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/image1segmentation.png) -->
-
 # Quantizing Deep Learning Models For Semantic Image Segmentation
 Welcome to our project on quantizing deep learning models for semantic image segmentation!
 
@@ -49,11 +44,23 @@ We quantized the FCN-ResNet50 model on the COCO 2017 Val dataset using various b
  ### Inference time on GPUs
 ![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/fcn_gpu.png)
 
-`Tesla T4` and `Tesla V100-SXM2` were provided by google cloud platform. `NVIDIA GeForce RTX 3080 Ti` experiment was run locally.
+`Tesla T4` and `Tesla V100-SXM2` were provided by google cloud platform. `NVIDIA GeForce RTX 3080 Ti` experiment was run locally. Inference speed on GPU is higher for quantized model with an average speed up of 1.25x
+
 
  ### Inference time on CPUs
 
 ![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/fcn_cpu.png)
+
+
+Experiments with `Intel(R) Xeon(R) CPU @ 2.00GHz` and `Intel(R) Xeon(R) CPU @ 2.30GHz` processors were run on google cloud platform. `AMD Ryzen 7 3700X 8-Core Processor` and `Quad-Core Intel Core i7` was run locally. Inference speed on CPU is higher for quantized model with an average speed up of 1.79x
+
+### Segmentation Samples on Quantized and Non-Quantized Models 
+
+<div style="display:flex;">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/real_img.png" width="300" height="300">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/quantized_img.png" width="300" height="300">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/real_img_normal.png" width="300" height="300">
+</div>
 
 
 ## Citation
