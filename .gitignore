@@ -133,7 +133,6 @@ dmypy.json
 *.onnx 
 
 #images 
-*.png
 *.jpg
 *.pdf
 
@@ -144,3 +143,6 @@ data/
 #misc
 deploy.yaml
 history.snapshot
+
+#
+nc_workspace/

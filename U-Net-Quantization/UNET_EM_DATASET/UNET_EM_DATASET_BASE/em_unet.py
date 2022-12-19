@@ -28,6 +28,10 @@ from matplotlib.image import imread
 import torch.nn.functional as F
 import model_visualizer as mv
 cudnn.benchmark = True
+
+
+# # Force pytorch to only use cpu
+#os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 cuda = torch.cuda.is_available()
 device = []
 
@@ -148,7 +152,8 @@ def run_main(config):
     model = m.Unet(drop_rate=0.4, bn_momentum=0.1, config=config)
     if config['operation_mode'].lower() == "retrain" or config['operation_mode'].lower() == "inference":
         print("Using a trained model...")
-        model.load_state_dict(torch.load(config['trained_model']))
+        model.load_state_dict(torch.load(
+            config['trained_model']))
     elif config["operation_mode"].lower() == "visualize":
         print("Using a trained model...")
         if cuda:
@@ -258,7 +263,13 @@ def run_main(config):
                     var_gt = gt_samples
                     var_gt = var_gt.float()
                 # import ipdb as pdb; pdb.set_trace()
+
+                start = time.time()
                 preds = model(var_input)
+                end = time.time()
+
+                print("Inference Time : ", end-start, "----"*5)
+
                 loss = dice_loss(preds, var_gt)
                 val_loss_total += loss.item()
             # Metrics computation
@@ -270,7 +281,8 @@ def run_main(config):
             preds = preds.astype(np.uint8)
             preds = preds.squeeze(axis=1)
             metric_mgr(preds, gt_npy)
-            #save_image(input_samples[0][0], preds[0], gt_samples, epoch, idx[0])
+            # save_image(input_samples[0][0], preds[0],
+            #            gt_samples, epoch, idx[0], output_image_dir)
             # save_pred(model, image_val_path, epoch, output_image_dir)
             num_steps += 1
 
