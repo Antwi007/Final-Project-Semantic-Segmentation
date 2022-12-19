@@ -1,8 +1,8 @@
 ![]( https://visitor-badge.glitch.me/badge?page_id=antwi007.Final-Project-Semantic-Segmentation)
 
 <div style="display:flex;">
-  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/img1real.png" width="400" height="400">
-<img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/image1segmentation.png" width="400" height="400">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/FCN-Quantization/img1real.png" width="400" height="400">
+<img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/FCN-Quantization/image1segmentation.png" width="400" height="400">
 </div>
 
 
@@ -42,14 +42,14 @@ We quantized the FCN-ResNet50 model on the COCO 2017 Val dataset using various b
  We also tested the models on different hardware platforms to see how they would perform in practice. Below, we present the results of our inference time experiments on GPUs and CPUs.
 
  ### Inference time on GPUs
-![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/fcn_gpu.png)
+![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/fcn_gpu.png)
 
 `Tesla T4` and `Tesla V100-SXM2` were provided by google cloud platform. `NVIDIA GeForce RTX 3080 Ti` experiment was run locally. Inference speed on GPU is higher for quantized model with an average speed up of 1.25x
 
 
  ### Inference time on CPUs
 
-![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/fcn_cpu.png)
+![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/fcn_cpu.png)
 
 
 Experiments with `Intel(R) Xeon(R) CPU @ 2.00GHz` and `Intel(R) Xeon(R) CPU @ 2.30GHz` processors were run on google cloud platform. `AMD Ryzen 7 3700X 8-Core Processor` and `Quad-Core Intel Core i7` was run locally. Inference speed on CPU is higher for quantized model with an average speed up of 1.79x
@@ -57,23 +57,53 @@ Experiments with `Intel(R) Xeon(R) CPU @ 2.00GHz` and `Intel(R) Xeon(R) CPU @ 2.
 ### Segmentation Samples on Quantized and Non-Quantized Models 
 
 <div style="display:flex;">
-  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/real_img.png" width="250" height="250">
-  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/quantized_img.png" width="250" height="250">
-  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/results_images/real_img_normal.png" width="250" height="250">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/real_img.png" width="250" height="250">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/quantized_img.png" width="250" height="250">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/real_img_normal.png" width="250" height="250">
 </div>
 
 The leftmost image is the original image, the middle is the segmenation provided by the quantized model, and the rightmost is the segmentation mask provided by the normal non-quantized model. There's no significant drop in quality of the segmentation provided by the quantized model as compared to the non-quantized model.
 
-## Citation
 
-Bibtex:
+## U-Net on Neuronal structures in Electron Microscopic (EM)
+We also evaluated the impact of quantization on the performance of a U-Net model for semantic image segmentation of neuronal structures in electron microscopy images. We quantized our model to 8 bit width for both activations and weights and compared the results to the full 32 bit precision model. 
 
-    @inproceedings{askarimiccai2019,
-    title={U-Net Fixed Point Quantization For Medical Image Segmentation},
-    author={AskariHemmat, MohammadHossein and Honari, Sina and Rouhier, Lucas  and S. Perone, Christian  and Cohen-Adad, Julien and Savaria, Yvon and David, Jean-Pierre},
-    booktitle={Medical Imaging and Computer Assisted Intervention (MICCAI), Hardware Aware Learning Workshop (HAL-MICCAI) 2019},
-    year={2019},
-    publisher={Springer}
-    }
+| Bit width | Dice Score | Model size |
+|-----------|------|------------|
+| 32        | 93.78 | 18.47 MB     |
+| 8         | 90.78 | 9.23 MB      |
+
+For U-Net model we also compared inference speed on CPU and GPU hardware platforms.
+
+ ### Inference time on GPUs
+
+![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/unet_gpu.png)
+
+ `Tesla V100-SXM2` were provided by google cloud platform. `NVIDIA GeForce RTX 3080 Ti` experiment was run locally. There's no significant speed up in inference time on the GPUs. 
+
+ ### Inference time on CPUs
+
+ ![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/unet_cpu.png)
+
+ `Tesla V100-SXM2` were provided by google cloud platform. `NVIDIA GeForce RTX 3080 Ti` experiment was run locally. There's no significant speed up in inference time on the GPUs. 
+
+ The hardware provisions are specified as above. Here as well we don't necesarily see a significant speed up in inference time. 
+
+ ### Segmentation Samples on Quantized and Non-Quantized Models
+
+ <div style="display:flex;">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/real_cell.png" width="250" height="250">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/quantized_cell.png" width="250" height="250">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/normal_cell.png" width="250" height="250">
+</div>
+
+The left image is the real cell, the middle image is the segmentation provided by the quantized model, and the right image is the segmentation provided by the normal model. 
+
+
+## Conclusion
+
+Our experimentation with quantizing semantic image segmentation models using FCN-ResNet-50 and U-Net resulted in several notable findings. For the ResNet-50 model, we were able to successfully reduce the model size and increase the inference speed while maintaining a mean IOU that was close enough to the non-quantized model. On the other hand, while we were able to reduce the model size for the U-Net model, the inference speed remained the same. These results demonstrate the potential benefits of quantization for semantic image segmentation models, particularly in terms of model size and inference speed.
+
+This work was produced as part of Final Project for COMS 6998 Pratical Deep Learning System Performance at Columbia University. 
   
 
