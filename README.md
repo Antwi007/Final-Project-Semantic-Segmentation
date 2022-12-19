@@ -1,7 +1,7 @@
 ![]( https://visitor-badge.glitch.me/badge?page_id=antwi007.Final-Project-Semantic-Segmentation)
 
-![alt text](https://github.com/antwi007/Final-Project-Semantic-Segmentation/FCN-Quantization/img1real.png)
-![alt text](https://github.com/antwi007/Final-Project-Semantic-Segmentation/FCN-Quantization/image1segmentation.png)
+![alt text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/tree/nana/FCN-Quantization/img1real.png)
+![alt text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/tree/nana/FCN-Quantization/image1segmentation.png)
 
 # Quantizing Deep Learning Models For Semantic Image Segmentation
 Welcome to our project on quantizing deep learning models for semantic image segmentation!
@@ -39,13 +39,13 @@ We quantized the FCN-ResNet50 model on the COCO 2017 Val dataset using various b
  We also tested the models on different hardware platforms to see how they would perform in practice. Below, we present the results of our inference time experiments on GPUs and CPUs.
 
  ### Inference time on GPUs
-![alt text](https://github.com/antwi007/Final-Project-Semantic-Segmentation/results_images/fcn_gpu.png)
+![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/tree/nana/results_images/fcn_gpu.png)
 
 `Tesla T4` and `Tesla V100-SXM2` were provided by google cloud platform. `NVIDIA GeForce RTX 3080 Ti` experiment was run locally.
 
  ### Inference time on CPUs
 
-![alt text](https://github.com/antwi007/Final-Project-Semantic-Segmentation/results_images/fcn_cpu.png)
+![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/tree/nana/results_images/fcn_cpu.png)
 
 
 ## Citation
