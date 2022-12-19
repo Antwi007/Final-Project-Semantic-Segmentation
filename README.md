@@ -1,8 +1,12 @@
 ![]( https://visitor-badge.glitch.me/badge?page_id=antwi007.Final-Project-Semantic-Segmentation)
 
+<div style="display:flex;">
+  <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/img1real.png" width="400" height="400">
+<img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/image1segmentation.png" width="400" height="400">
+</div>
 
-<img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/img1real.png" width="200" height="200">
-<img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/image1segmentation.png" width="200" height="200">
+
+
 <!-- 
 ![alt text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/img1real.png)
 ![alt text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/image1segmentation.png) -->
