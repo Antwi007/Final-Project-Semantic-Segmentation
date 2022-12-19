@@ -1,7 +1,11 @@
 ![]( https://visitor-badge.glitch.me/badge?page_id=antwi007.Final-Project-Semantic-Segmentation)
 
+
+<img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/img1real.png" width="200" height="200">
+<img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/image1segmentation.png" width="200" height="200">
+<!-- 
 ![alt text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/img1real.png)
-![alt text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/image1segmentation.png)
+![alt text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/nana/FCN-Quantization/image1segmentation.png) -->
 
 # Quantizing Deep Learning Models For Semantic Image Segmentation
 Welcome to our project on quantizing deep learning models for semantic image segmentation!
