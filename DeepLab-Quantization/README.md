@@ -53,5 +53,9 @@ We quantized the model on PASCAL VOC 2012 train_aug dataset. While we cannot obt
 
 Here are some of the samples of the segmentation results. The result order for each sample, from left to right, is original image, quantized model, unquantized model.
 
-![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/deeplab-Quantization/result1.png)
+![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/deeplab-Quantization/DeepLab-Quantization/deeplab_result1.png)
+
+![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/deeplab-Quantization/DeepLab-Quantization/deeplab_result2.png)
+
+![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/deeplab-Quantization/DeepLab-Quantization/deeplab_result3.png)
 
