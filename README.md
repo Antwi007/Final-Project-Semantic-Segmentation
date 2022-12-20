@@ -22,13 +22,15 @@ The root directory of this repository contains the following directories:
 
 2. `U-Net-Quantization`: This directory contains code and instructions for quantizing the U-Net model for semantic image segmentation in medical imaging.
 
-3. `tf.yml`: Conda environment containing all libraries and versions used to run all the code in the repo.
+3. `DeepLab-Quantization`: This directory contains code and instructions for quantizing the DeepLab model for semantic image segmentation.
+
+4. `tf.yml`: Conda environment containing all libraries and versions used to run all the code in the repo.
 
 Each directory contains a `README.md` file that provides an overview of the contents of the directory, including any dependencies and instructions for running the code.
 
 # Results
 
-In this section, we present the results of model quantization experiments on different datasets. For detailed instructions on how to execute the code and reproduce these results, please refer to the `README` file in the relevant subdirectory (fcn-resnet50 or u-net).
+In this section, we present the results of model quantization experiments on different datasets. For detailed instructions on how to execute the code and reproduce these results, please refer to the `README` file in the relevant subdirectory (fcn-resnet50, u-net, or DeepLab).
 
 ## FCN-ResNet50 on COCO Val 2017 
 
@@ -98,6 +100,17 @@ For U-Net model we also compared inference speed on CPU and GPU hardware platfor
 </div>
 
 The left image is the real cell, the middle image is the segmentation provided by the quantized model, and the right image is the segmentation provided by the normal model. 
+
+## DeepLab on PASCAL VOC 2012
+
+We quantized the model on PASCAL VOC 2012 train_aug dataset. While we cannot obtain the mIOU with eval.py as for some reason the result we got is always a NaN, according to [tensorflow research team](https://github.com/tensorflow/models/blob/master/research/deeplab/g3doc/quantize.md), they were able to obtain mIOU 0.7426 with quantized 8-bit models. We also did not observe a significant improvement of throughput. This is because the script we used is doing simulated quantization, so while the model weights are 8-bit, the computations are done with the dequantized 32-bit weights. In other words, the model parameters will be dequantized to 32-bit before the computations are carried out and thus slow down the inference speed.
+
+| Bit width | mIOU | Throughput |
+| --------- | ---- | -----------|
+| 32 | 0.7532 | 944 |
+| 8 | 0.7426 | 990|
+
+Here are some of the samples of the segmentation results. The result order for each sample, from left to right, is original image, quantized model, unquantized model.
 
 
 ## Conclusion
