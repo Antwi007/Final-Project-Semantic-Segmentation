@@ -41,21 +41,3 @@ follow this link to document your checkpoint https://github.com/tensorflow/model
 2. Create directories for your evaluation and visualization
 
 3. Run the code in infer_and_vis.ipynb. The scripts it calls can only be directly called and cannot be copied and pasted in notebook and run due to tensorflow flag issues. Sometimes, you might have to manually interrupt the cell that calls vis.py after it finishes visualizing each image
-
-
-## Results
-We quantized the model on PASCAL VOC 2012 train_aug dataset. While we cannot obtain the mIOU with eval.py as for some reason the result we got is always a NaN, according to [tensorflow research team](https://github.com/tensorflow/models/blob/master/research/deeplab/g3doc/quantize.md), they were able to obtain mIOU 0.7426 with quantized 8-bit models. We also did not observe a significant improvement of throughput. This is because the script we used is doing simulated quantization, so while the model weights are 8-bit, the computations are done with the dequantized 32-bit weights. In other words, the model parameters will be dequantized to 32-bit before the computations are carried out and thus slow down the inference speed.
-
-| Bit width | mIOU | Throughput |
-| --------- | ---- | -----------|
-| 32 | 0.7532 | 944 |
-| 8 | 0.7426 | 990|
-
-Here are some of the samples of the segmentation results. The result order for each sample, from left to right, is original image, quantized model, unquantized model.
-
-![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/deeplab-Quantization/DeepLab-Quantization/deeplab_result1.png)
-
-![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/deeplab-Quantization/DeepLab-Quantization/deeplab_result2.png)
-
-![Alt Text](https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/deeplab-Quantization/DeepLab-Quantization/deeplab_result3.png)
-
