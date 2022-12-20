@@ -113,9 +113,13 @@ We quantized the model on PASCAL VOC 2012 train_aug dataset. While we cannot obt
 Here are some of the samples of the segmentation results. The result order for each sample, from left to right, is original image, quantized model, unquantized model.
 
 
+ <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/deeplab_result1.png" height='250'>
+ <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/deeplab_result2.png" height='250'>
+ <img src="https://github.com/Antwi007/Final-Project-Semantic-Segmentation/blob/main/results_images/deeplab_result3.png" height='250'>
+
 ## Conclusion
 
-Our experimentation with quantizing semantic image segmentation models using FCN-ResNet-50 and U-Net resulted in several notable findings. For the ResNet-50 model, we were able to successfully reduce the model size and increase the inference speed while maintaining a mean IOU that was close enough to the non-quantized model. On the other hand, while we were able to reduce the model size for the U-Net model, the inference speed remained the same. These results demonstrate the potential benefits of quantization for semantic image segmentation models, particularly in terms of model size and inference speed.
+Our experimentation with quantizing semantic image segmentation models using FCN-ResNet-50, U-Net, and DeepLab resulted in several notable findings. For the ResNet-50 model, we were able to successfully reduce the model size and increase the inference speed while maintaining a mean IOU that was close enough to the non-quantized model. On the other hand, while we were able to reduce the model size for the U-Net model, the inference speed remained the same. Finally, for the quantized DeepLab model, while we did not observe a significant improvement of inference speed, we observed how QAT can maintain the high accuracy (mIOU) of the model. These results demonstrate the potential benefits of quantization for semantic image segmentation models, particularly in terms of model size and inference speed.
 
 This work was produced as part of Final Project for COMS 6998 Pratical Deep Learning System Performance at Columbia University. 
   
