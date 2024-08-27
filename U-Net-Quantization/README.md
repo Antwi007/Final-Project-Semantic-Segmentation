@@ -48,12 +48,4 @@ Run the notebook model_size.ipynb to find the model size after quantization. Bas
 
 ## Citation
 
-Bibtex:
-
-    @inproceedings{askarimiccai2019,
-    title={U-Net Fixed Point Quantization For Medical Image Segmentation},
-    author={AskariHemmat, MohammadHossein and Honari, Sina and Rouhier, Lucas  and S. Perone, Christian  and Cohen-Adad, Julien and Savaria, Yvon and David, Jean-Pierre},
-    booktitle={Medical Imaging and Computer Assisted Intervention (MICCAI), Hardware Aware Learning Workshop (HAL-MICCAI) 2019},
-    year={2019},
-    publisher={Springer}
-    }
+AskariHemmat, MohammadHossein, et al. "U-Net Fixed Point Quantization For Medical Image Segmentation." Medical Imaging and Computer Assisted Intervention (MICCAI), Hardware Aware Learning Workshop (HAL-MICCAI) 2019. Springer, 2019.
